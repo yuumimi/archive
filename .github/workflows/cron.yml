@@ -18,6 +18,8 @@ jobs:
         run: |
           mkdir release
           wget -qO- https://raw.githubusercontent.com/misakaio/chnroutes2/master/chnroutes.txt | grep -v '#' > release/chnroutes.txt
+          wget -qO- https://raw.githubusercontent.com/misakaio/chnroutes2/master/chnroutes.txt | grep -v '#' > release/cn.txt
+          wget -qO- https://gaoyifan.github.io/china-operator-ip/china6.txt | grep -v '#' > release/cn6.txt
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
