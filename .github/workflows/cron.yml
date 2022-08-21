@@ -20,6 +20,8 @@ jobs:
           wget -qO- https://raw.githubusercontent.com/misakaio/chnroutes2/master/chnroutes.txt | grep -v '#' > release/chnroutes.txt
           wget -qO- https://raw.githubusercontent.com/misakaio/chnroutes2/master/chnroutes.txt | grep -v '#' > release/cn.txt
           wget -qO- https://gaoyifan.github.io/china-operator-ip/china6.txt | grep -v '#' > release/cn6.txt
+          wget -O release/Clash.Meta-darwin-amd64-6131375.gz https://github.com/yuumimi/Clash.Meta/releases/download/Prerelease-Alpha/Clash.Meta-darwin-amd64-alpha-6131375.gz
+          wget -O release/Clash.Meta-darwin-arm64-6131375.gz https://github.com/yuumimi/Clash.Meta/releases/download/Prerelease-Alpha/Clash.Meta-darwin-arm64-alpha-6131375.gz
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
